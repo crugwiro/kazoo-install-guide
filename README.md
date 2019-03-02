@@ -68,6 +68,8 @@ aws ec2 run-instances --image-id ami-e1496384 --count 1 --instance-type t2.large
 ```
 aws ec2 authorize-security-group-ingress --group-name otf_kazoo_sg1 --protocol tcp --port 22 --cidr 0.0.0.0/0
 
+aws ec2 authorize-security-group-ingress --group-name otf_kazoo_sg1 --protocol tcp --port 80 --cidr 0.0.0.0/0
+
 aws ec2 authorize-security-group-ingress --group-name otf_kazoo_sg1 --protocol tcp --port 8000 --cidr 0.0.0.0/0
 
 aws ec2 authorize-security-group-ingress --group-name otf_kazoo_sg1 --protocol tcp --port 8443 --cidr 0.0.0.0/0
